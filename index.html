@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global News Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-newspaper"></i>
+                    <div>Daily <span>News</span></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search for news...">
+            <button id="search-btn"><i class="fas fa-search"></i> Search</button>
+        </div>
+        
+        <div class="categories">
+            <button class="category-btn active" data-category="general">
+                <i class="fas fa-globe"></i> General
+            </button>
+            <button class="category-btn" data-category="business">
+                <i class="fas fa-chart-line"></i> Business
+            </button>
+            <button class="category-btn" data-category="technology">
+                <i class="fas fa-microchip"></i> Technology
+            </button>
+            <button class="category-btn" data-category="entertainment">
+                <i class="fas fa-film"></i> Entertainment
+            </button>
+            <button class="category-btn" data-category="health">
+                <i class="fas fa-heartbeat"></i> Health
+            </button>
+            <button class="category-btn" data-category="science">
+                <i class="fas fa-flask"></i> Science
+            </button>
+            <button class="category-btn" data-category="sports">
+                <i class="fas fa-running"></i> Sports
+            </button>
+        </div>
+        
+        <div id="news-container" class="news-grid">
+            <div class="loading">
+                <i class="fas fa-spinner fa-spin"></i> Loading latest news...
+            </div>
+        </div>
+        
+        <button id="load-more" class="load-more">Load More News</button>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Global News Hub. All rights reserved.</p>
+            <p>Powered by News API</p>
+        </div>
+    </footer>
+
+    <div class="notification" id="notification">
+        <i class="fas fa-info-circle"></i> <span id="notification-text"></span>
+    </div>
+
+</body>
+<script src="index.js"></script>
+</html>
