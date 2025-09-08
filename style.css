@@ -232,21 +232,3 @@
                 grid-template-columns: 1fr;
             }
         }
-        
-        .notification {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            padding: 15px 20px;
-            background-color: #ff6b6b;
-            color: white;
-            border-radius: 4px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-            transform: translateX(100%);
-            transition: transform 0.3s ease;
-            z-index: 1000;
-        }
-        
-        .notification.show {
-            transform: translateX(0);
-        }
