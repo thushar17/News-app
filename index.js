@@ -10,8 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const searchInput = document.getElementById("search-input");
   const searchBtn = document.getElementById("search-btn");
   const loadMoreBtn = document.getElementById("load-more");
-  const notification = document.getElementById("notification");
-  const notificationText = document.getElementById("notification-text");
+
 
   let currentCategory = "general";
   let currentPage = 1;
