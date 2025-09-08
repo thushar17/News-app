@@ -1,8 +1,9 @@
 
 
-        document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
   const API_KEY = "c7c7e9370852438ea536018869b71324";
   const BASE_URL = "https://newsapi.org/v2";
+  const PROXY_URL = "https://api.allorigins.win/raw?url=";
 
   const newsContainer = document.getElementById("news-container");
   const categoryButtons = document.querySelectorAll(".category-btn");
@@ -67,9 +68,9 @@
   }
 
   function fetchNews(append = false) {
-    let url = "";
+    let realUrl = "";
     if (currentQuery) {
-      url =
+      realUrl =
         BASE_URL +
         "/everything?q=" +
         currentQuery +
@@ -78,7 +79,7 @@
         "&pageSize=12&apiKey=" +
         API_KEY;
     } else {
-      url =
+      realUrl =
         BASE_URL +
         "/top-headlines?category=" +
         currentCategory +
@@ -87,6 +88,8 @@
         "&pageSize=12&apiKey=" +
         API_KEY;
     }
+
+    let url = PROXY_URL + encodeURIComponent(realUrl);
 
     if (!append) {
       newsContainer.innerHTML =
